@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFC Ballers | Home</title>
+  <style>
+    :root {
+      --primary-blue: #0a05a4;
+      --header-blue: #070278;
+      --golden: #FFD700;
+      --white: #ffffff;
+      --black: #000000;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-blue);
+      color: var(--white);
+    }
+
+    header {
+      background-color: var(--header-blue);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      position: relative;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: var(--white);
+    }
+
+    .hamburger {
+      font-size: 1.8rem;
+      color: var(--white);
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+   footer {
+      background-color: var(--black);
+      padding: 1rem;
+      text-align: center;
+    }
+    a { color: #ffd900;}
+    
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 1.2rem;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--header-blue);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99;
+      }
+
+      nav a {
+        padding: 0.7rem 2rem;
+        border-top: 1px solid var(--primary-blue);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      header {
+        flex-wrap: nowrap;
+      }
+
+      .logo {
+        margin-left: auto;
+      }
+      main {
+      padding: 40px;
+    }
+    h1 {
+      color: #FFD700;
+      text-align: center;
+    }
+     
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="logo">
+      <img src="C:\Users\Abuza\Downloads\Screenshot_2025-07-13_124147-removebg-preview.png" alt="SFC Ballers Logo">
+      <h1>SFC Ballers</h1>
+    </div>
+    <nav id="navbar-links">
+      <a href="SFCHOME.html">Home</a>
+      <a href="SFCABOUT.html">About</a>
+      <a href="SFCPLAYERS.html">Squad</a>
+      <a href="SFCACHIVE.html">Achievements</a>
+      <a href="SFCJOIN.html">Join</a>
+      <a href="SFCSHOP.html">Shop</a>
+      <a href="SFCCONTACT.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Latest News</h1>
+    <p style="text-align:center;">Stay updated with the latest matches, events, and highlights from SFC Ballers!</p>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+  <footer>
+    <p>&copy; 2025 SFC Ballers | Made By <a href="https://zarsdotcom.netlify.app/" >ABUZAR</a></p>
+  </footer>
+</body>
+</html>
+
